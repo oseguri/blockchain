@@ -17,6 +17,8 @@ dependencies {
     implementation 'org.bouncycastle:bcprov-jdk18on:1.80'
     implementation 'commons-codec:commons-codec:1.18.0'
     implementation("org.bitcoinj:bitcoinj-core:0.17")
+    implementation("org.rocksdb:rocksdbjni:10.2.1")
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
 }
 
 test {

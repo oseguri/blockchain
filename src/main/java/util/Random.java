@@ -1,7 +1,8 @@
 package util;
 import java.security.SecureRandom;
 public class Random {
-    public static String generateRandomString(int length) {
+    public static String generateRandomString() {
+        int length = getRandomNumber(32);
         char[] result = new char[length];
         for (int i = 0; i < length; i++) {
             char value = getRandomAlphabet();
