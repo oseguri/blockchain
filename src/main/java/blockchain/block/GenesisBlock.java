@@ -84,12 +84,6 @@ public class GenesisBlock {
         inputs.add(coinbaseInput);
 
         // 출력 (고정된 주소로 보상)
-        Transaction coinbaseTx = getTransaction(inputs);
-
-        return coinbaseTx;
-    }
-
-    private static Transaction getTransaction(List<TransactionInput> inputs) throws NoSuchAlgorithmException {
         TransactionOutput output = new TransactionOutput(
                 GENESIS_MINER.getBytes(),       // 고정된 주소
                 new byte[0],                    // pkscript
@@ -106,6 +100,7 @@ public class GenesisBlock {
         if (coinbaseTx.getVoteList() == null) {
             coinbaseTx.setVoteList(new ArrayList<>());
         }
+
         return coinbaseTx;
     }
 
